@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajos - INNOVACODE</title>
+    <style>
+        /* Estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #1b1b1b;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+        }
+
+        /* Menú */
+        .menu {
+            background-color: #111;
+            padding: 20px 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .menu ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        .menu ul li {
+            margin: 0 20px;
+        }
+
+        .menu ul li a {
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 30px;
+            background: linear-gradient(135deg, rgba(255,105,180,0.1), rgba(138,43,226,0.1));
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .menu ul li a.active {
+            background: linear-gradient(135deg, #FF69B4, #8A2BE2);
+            color: #fff;
+            box-shadow: 0 5px 15px rgba(255, 105, 180, 0.5);
+        }
+
+        /* Contenido */
+        .content {
+            padding-top: 100px;
+            text-align: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .content h1 {
+            margin-top: 150px;
+            font-size: 50px;
+        }
+
+        .content p {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+        /* Trabajos */
+        .works {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        .work-item {
+            background: #333;
+            border-radius: 15px;
+            padding: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .work-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.7);
+        }
+
+        .work-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255,105,180,0.2), rgba(138,43,226,0.2));
+            opacity: 0.3;
+            transition: opacity 0.3s;
+            z-index: 0;
+        }
+
+        .work-item:hover::before {
+            opacity: 0.5;
+        }
+
+        .work-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .work-content h2 {
+            margin-bottom: 10px;
+            font-size: 24px;
+            color: #FF69B4;
+        }
+
+        .work-content p {
+            font-size: 16px;
+            color: #ccc;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #111;
+            padding: 40px 0;
+            text-align: center;
+            color: #fff;
+            margin-top: 100px;
+            box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.6);
+        }
+
+        .footer p {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .footer span {
+            background: linear-gradient(135deg, #FF69B4, #8A2BE2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menú -->
+    <nav class="menu">
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="" class="active">Trabajos</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="contactos.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido de Trabajos -->
+    <div class="content">
+        <h1>Nuestros Trabajos</h1>
+        <p>Explora nuestros proyectos recientes.</p>
+
+        <!-- Sección de Trabajos -->
+        <div class="works">
+            <div class="work-item">
+                <div class="work-content">
+                    <h2>Trabajo 1</h2>
+                    <p>Descripción breve del primer trabajo. Ejemplo de nuestra experiencia y dedicación en cada proyecto.</p>
+                </div>
+            </div>
+            <div class="work-item">
+                <div class="work-content">
+                    <h2>Trabajo 2</h2>
+                    <p>Descripción breve del segundo trabajo. Muestra de nuestras habilidades y conocimientos aplicados.</p>
+                </div>
+            </div>
+            <div class="work-item">
+                <div class="work-content">
+                    <h2>Trabajo 3</h2>
+                    <p>Descripción breve del tercer trabajo. Innovación y soluciones personalizadas para cada cliente.</p>
+                </div>
+            </div>
+            <div class="work-item">
+                <div class="work-content">
+                    <h2>Trabajo 4</h2>
+                    <p>Descripción breve del cuarto trabajo. Compromiso con la calidad y la satisfacción del cliente.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Bienvenido usuario a <span>INNOVACODE</span></p>
+    </footer>
+
+</body>
+</html>
+

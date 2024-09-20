@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - INNOVACODE</title>
+    <style>
+        /* Estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            overflow-x: hidden;
+            background-color: #1b1b1b;
+        }
+
+        /* Menú */
+        .menu {
+            background-color: #111;
+            padding: 20px 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .menu ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        .menu ul li {
+            margin: 0 15px;
+        }
+
+        .menu ul li a {
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 30px;
+            background: linear-gradient(135deg, rgba(255,105,180,0.1), rgba(138,43,226,0.1));
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .menu ul li a:hover {
+            color: #fff;
+            box-shadow: 0 10px 20px rgba(255, 105, 180, 0.3);
+        }
+
+        .menu ul li a.active {
+            background: linear-gradient(135deg, #FF69B4, #8A2BE2);
+            color: #fff;
+            box-shadow: 0 5px 15px rgba(255, 105, 180, 0.5);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            background: url('path-to-your-image.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: 24px;
+            margin-top: 10px;
+        }
+
+        /* Sección de Sobre Nosotros */
+        .about {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #333;
+        }
+
+        .about h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-top: 20px;
+        }
+
+        /* Sección de Servicios */
+        .services {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .service-item {
+            margin: 20px;
+            display: inline-block;
+            width: calc(33.333% - 40px);
+            vertical-align: top;
+        }
+
+        .service-item h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .service-item p {
+            font-size: 16px;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #111;
+            padding: 40px 20px;
+            text-align: center;
+            color: #fff;
+            box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.6);
+        }
+
+        .footer p {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .footer span {
+            background: linear-gradient(135deg, #FF69B4, #8A2BE2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menú -->
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html" class="active">Inicio</a></li>
+            <li><a href="html/trabajos.html">Trabajos</a></li>
+            <li><a href="html/proyectos.html">Proyectos</a></li>
+            <li><a href="html/servicios.html">Servicios</a></li>
+            <li><a href="html/contactos.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Bienvenido a INNOVACODE</h1>
+            <p>Innovación y tecnología para diseñar el futuro</p>
+        </div>
+    </div>
+
+    <!-- Sección de Sobre Nosotros -->
+    <section class="about">
+        <h2>Sobre Nosotros</h2>
+        <p>En INNOVACODE, nos especializamos en proporcionar soluciones innovadoras y personalizadas para todas tus necesidades tecnológicas. Nuestro equipo de expertos está comprometido a ofrecer resultados excepcionales y a transformar tus ideas en realidades impactantes.</p>
+    </section>
+
+    <!-- Sección de Servicios -->
+    <section class="services">
+        <h2>Nuestros Servicios</h2>
+        <div class="service-item">
+            <h3>Desarrollo Web</h3>
+            <p>Creación de sitios web modernos, funcionales y adaptados a tus necesidades.</p>
+        </div>
+        <div class="service-item">
+            <h3>Consultoría Tecnológica</h3>
+            <p>Asesoramiento experto para optimizar tus procesos y estrategias tecnológicas.</p>
+        </div>
+        <div class="service-item">
+            <h3>Diseño UX/UI</h3>
+            <p>Diseño intuitivo y atractivo que mejora la experiencia de usuario en tus plataformas.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Bienvenido usuario a <span>INNOVACODE</span></p>
+    </footer>
+
+</body>
+</html>
+
